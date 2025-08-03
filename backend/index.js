@@ -27,6 +27,15 @@ app.get("/", async (req,res) => {
   }
 });
 
+app.get("/analytics" ,requireAuth ,async (req, res) => {
+  try {
+    res.status(200).send(
+    `analytics page is accessible only to authorized users.`)
+  } catch (error) {
+    console.log(error.message);
+  }
+})
+
 // inngest route
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
