@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme{
+
+    --color-primary: #60a5fa;   /* Lighter Blue for dark mode */
+  --color-secondary: #cbd5e1; /* Light Slate Gray */
+  --color-bg: #111827;        /* Dark background */
+  --color-accent: #facc15;    /* Bright yellow */
+  --color-focus: #4ade80; 
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.light {
+       --color-primary: #2563eb;   /* Blue - For buttons, links */
+  --color-secondary: #64748b; /* Slate Gray - Secondary text */
+  --color-bg: #f9fafb;        /* Almost white - Background */
+  --color-accent: #fbbf24;    /* Amber - Highlights */
+  --color-focus: #22c55e;     /* Green - Focus/Active states */
+}
+
+body{
+  background-color: #111827;
+  color:#e1ebf7 ;
+}
