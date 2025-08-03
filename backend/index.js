@@ -27,7 +27,7 @@ app.get("/", async (req,res) => {
   }
 });
 
-app.get("/analytics" ,requireAuth ,async (req, res) => {
+app.get("/analytics" ,requireAuth(),async (req, res) => {
   try {
     res.status(200).send(
     `analytics page is accessible only to authorized users.`)
